@@ -5,20 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Друзі</title>
+    <style>
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        #go_back {
+            font-style: italic;
+        }
+
+        th {
+            background-color: green;
+            color: honeydew;
+            font-weight: 700;
+        }
+
+        tr:nth-of-type(2n+1) {
+            background-color: gray;
+            color: aqua;
+        }
+
+        tr:nth-of-type(5) td {
+            text-align: end;
+        }
+
+        th,
+        td {
+            padding: 7px;
+            text-align: center;
+        }
+
+        caption {
+            font-size: 18px;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid black;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Друзі Яворського Ігоря Вікторовича</h1>
-    <a href="index.html">Назад на головну</a>
+    <a href="index.html" id="go_back">Назад на головну</a>
     <h2>Мої друзі</h2>
 
     <table>
         <caption>Найкращі люди</caption>
-        <th>Прізвище</th>
-        <th>Ім’я</th>
-        <th>Дата народження</th>
-        <th>Адреса проживання</th>
-        <th>Контактний телефон</th>
+        <tr>
+            <th>Прізвище</th>
+            <th>Ім’я</th>
+            <th>Дата народження</th>
+            <th>Адреса проживання</th>
+            <th>Контактний телефон</th>
+        </tr>
 
         <tr>
             <td>Іванов</td>
