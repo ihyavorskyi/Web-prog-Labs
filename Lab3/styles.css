@@ -64,7 +64,7 @@ p {
     .col-lg-10,
     .col-lg-11,
     .col-lg-12 {
-        margin    : 10px;
+        margin    : 30px;
         border    : 1px solid black;
         background: lightslategray;
     }
@@ -134,7 +134,7 @@ p {
     .col-md-11,
     .col-md-12 {
         float     : left;
-        margin-top: 10px;
+        margin-top: 30px;
         background: lightslategray;
         border    : 1px solid black;
     }
@@ -208,7 +208,7 @@ p {
     .col-sd-11,
     .col-sd-12 {
         background: lightslategray;
-        margin-top: 10px;
+        margin-top: 30px;
         border    : 1px solid black;
     }
 
