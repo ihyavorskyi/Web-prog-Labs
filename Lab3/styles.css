@@ -45,7 +45,7 @@ p {
 }
 
 /* Large devices */
-@media (min-width: 993px) {
+@media screen and (min-width: 993px) {
 
     .row {
         display        : flex;
@@ -119,8 +119,11 @@ p {
 }
 
 /* Medium devices */
-@media (min-width: 769px) and (max-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
 
+    #third_title {
+        width: 18%;
+    }
     .col-md-1,
     .col-md-2,
     .col-md-3,
@@ -193,7 +196,7 @@ p {
 }
 
 /* Small divaces */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     .col-sd-1,
     .col-sd-2,
