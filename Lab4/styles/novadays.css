@@ -24,3 +24,13 @@ ol li:nth-of-type(3):hover,
 li:nth-of-type(5):hover {
     cursor: pointer;
 }
+
+@media screen and (min-width: 993px) {
+    section {
+        display: flex;
+    }
+
+    div {
+        flex: 1;
+    }
+}
