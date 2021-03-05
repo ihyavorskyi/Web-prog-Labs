@@ -1,0 +1,50 @@
+.row {
+    width          : 100%;
+    display        : flex;
+    justify-content: space-around;
+}
+
+body {
+    font-family: cursive;
+}
+
+h1 {
+    text-align : center;
+    font-family: inherit;
+}
+
+.title {
+    float        : right;
+    background   : aqua;
+    padding      : 15px;
+    font-size    : 32px;
+    border-left  : solid 1px black;
+    border-bottom: solid 1px black;
+    width        : 33%;
+    text-align   : center;
+    font-family  : inherit;
+}
+
+p {
+    padding    : 20px;
+    padding-top: 55px;
+    font-size  : 22px;
+    font-family: inherit;
+}
+
+div.row input {
+    width     : 100%;
+    height    : 100px;
+    background: darkgoldenrod;
+    color     : white;
+    font-size  : 30px;
+    font-family: inherit;
+}
+
+form {
+    width: 30%;
+}
+
+a {
+    text-align: center;
+}

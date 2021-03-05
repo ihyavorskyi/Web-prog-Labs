@@ -1,0 +1,110 @@
+.row {
+    width: 100%;
+}
+
+body {
+    font-family: cursive;
+}
+
+h1 {
+    text-align : center;
+    font-family: inherit;
+}
+
+#first_title {
+    background: lightcoral;
+}
+
+#second_title {
+    background: tomato;
+    color     : white;
+}
+
+#third_title {
+    background: lightgreen;
+}
+
+.title {
+    float        : right;
+    background   : aqua;
+    padding      : 15px;
+    font-size    : 28px;
+    border-left  : solid 1px black;
+    border-bottom: solid 1px black;
+    width        : 33%;
+    text-align   : center;
+    font-family  : inherit;
+}
+
+p {
+    padding    : 20px;
+    padding-top: 60px;
+    font-size  : 22px;
+    font-family: inherit;
+}
+
+div.row>div {
+    background: lavenderblush;
+    border    : 1px solid black;
+}
+
+input {
+    min-width  : 20%;
+    height     : 100px;
+    background : darkgoldenrod;
+    color      : white;
+    font-size  : 30px;
+    font-family: inherit;
+    margin     : 30px 40%;
+}
+
+/* Large devices */
+@media screen and (min-width: 993px) {
+    #first {
+        width: 31%;
+        float: left;
+    }
+
+    #second {
+        width      : 31%;
+        float      : left;
+        margin-left: 3.5%;
+    }
+
+    #third {
+        width: 31%;
+        float: right;
+    }
+}
+
+/* Medium devices */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    #first {
+        width: 48%;
+        float: left;
+    }
+
+    #second {
+        width        : 48%;
+        float        : right;
+        margin-bottom: 33px;
+    }
+
+    #third {
+        width: 100%;
+        clear: both;
+    }
+
+    #third_title {
+        width: 16%;
+    }
+}
+
+/* Small divaces */
+@media screen and (max-width: 768px) {
+
+    #first,
+    #second {
+        margin-bottom: 30px;
+    }
+}
