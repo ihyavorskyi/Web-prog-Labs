@@ -103,7 +103,6 @@ p {
 
 /* Small divaces */
 @media screen and (max-width: 768px) {
-
     #first,
     #second {
         margin-bottom: 30px;
