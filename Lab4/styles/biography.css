@@ -17,9 +17,13 @@ h2 {
 
 li {
     margin         : 9px;
-    min-width      : 500px;
     list-style-type: none;
     margin-left    : 0;
+    background     : aqua;
+    width          : 180px;
+    text-align     : center;
+    display        : grid;
+    height         : 30px;
 }
 
 li a {
