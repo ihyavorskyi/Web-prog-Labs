@@ -1,0 +1,76 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+h1,
+h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+#go_back {
+    font-style: italic;
+}
+
+th {
+    background-color: green;
+    color           : honeydew;
+    font-weight     : 700;
+}
+
+tr:nth-of-type(2n+1) {
+    background-color: gray;
+    color           : aqua;
+}
+
+td:last-child,
+th:last-child {
+    text-align: end;
+}
+
+th,
+td {
+    padding   : 7px;
+    text-align: center;
+}
+
+caption {
+    font-size: 18px;
+}
+
+table,
+th,
+td {
+    border: 2px solid black;
+}
+
+/* Large devices */
+@media screen and (min-width: 993px) {
+    th {
+        font-size: 1.3em;
+    }
+
+    td {
+        font-size: 1.2em;
+    }
+}
+
+/* Medium devices */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    th {
+        font-size: 1.2em;
+    }
+
+    td {
+        font-size: 1.1em;
+    }
+}
+
+/* Small divaces */
+@media screen and (max-width: 768px) {
+    th {
+        font-size: 1.1em;
+    }
+}

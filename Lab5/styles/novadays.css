@@ -1,0 +1,30 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+    font-size : 22px;
+    text-align: center;
+}
+
+#go_back {
+    font-style: italic;
+}
+
+h2 {
+    text-align: center;
+}
+
+.odd {
+    background-color: gray;
+    color           : aqua;
+}
+
+.fourth {
+    background-color: aqua;
+}
+
+ol li:nth-of-type(3):hover,
+li:nth-of-type(5):hover {
+    cursor: pointer;
+}

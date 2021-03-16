@@ -1,0 +1,158 @@
+h1 {
+    font-size  : 22px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+#go_back {
+    font-style: italic;
+}
+
+h3,
+h1 {
+    text-align : center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+li {
+    margin         : 9px;
+    list-style-type: none;
+    margin-left    : 0;
+    background     : aqua;
+    width          : 180px;
+    text-align     : center;
+    display        : grid;
+    height         : 30px;
+}
+
+li a {
+    background-color: blue;
+    font-family     : 'Times New Roman', Times, serif;
+    color           : aqua;
+    padding         : 4px;
+    text-decoration : none;
+    font-family     : 'Open Sans', sans-serif;
+    font-weight     : 300;
+}
+
+li a:hover {
+    background-color: magenta;
+    font-family     : 'Courier New', Courier, monospace;
+    color           : rgb(123, 255, 0);
+}
+
+li a:active {
+    background-color: yellow;
+    font-family     : Verdana, Tahoma, sans-serif;
+    color           : rgb(0, 0, 0);
+}
+
+#article1 {
+    color: blue;
+}
+
+#article2 {
+    color: rgb(136, 255, 0);
+}
+
+#article3 {
+    color: rgb(255, 0, 64);
+}
+
+#article4 {
+    color: rgb(0, 238, 255);
+}
+
+#article5 {
+    color: rgb(255, 0, 0);
+}
+
+#go_top {
+    font-weight: 700;
+}
+
+#go_up {
+    text-transform: uppercase;
+}
+
+article {
+    font-size  : 1.2em;
+    padding    : 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+
+#basics {
+    background-color: aqua;
+    border          : 1px solid black;
+}
+
+#clidhood {
+    background-color: rgb(255, 102, 0);
+    border          : 1px solid black;
+}
+
+#school {
+    background-color: rgb(0, 255, 128);
+    border          : 1px solid black;
+}
+
+#after_school {
+    background-color: rgb(255, 0, 0);
+    border          : 1px solid black;
+}
+
+#university {
+    background-color: rgb(208, 255, 0);
+    border          : 1px solid black;
+}
+
+article,
+section>a {
+    margin: 10px;
+}
+
+.row {
+    padding        : 0;
+    justify-content: space-evenly;
+}
+
+.col-xl-2 {
+    margin-left  : 0;
+    margin-right : 0;
+    margin-bottom: 40px;
+}
+
+@media  (min-width:1450px) and (max-width: 1550px) {
+
+    .h2,
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width:1300px) and  (max-width: 1450px) {
+
+    .h2,
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width:1200px) and (max-width: 1300px) {
+
+    .h2,
+    h2 {
+        font-size: 1.4rem;
+    }
+}

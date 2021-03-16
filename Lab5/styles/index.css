@@ -1,0 +1,47 @@
+h1 {
+    font-size  : 24px;
+    text-align : center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+p {
+    font-size  : 1.2em;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+}
+
+a:nth-of-type(1) {
+    color: rgb(151, 141, 0);
+}
+
+a:nth-of-type(1):visited {
+    color: rgb(56, 153, 0);
+}
+
+a:nth-of-type(2) {
+    color: rgb(0, 121, 151);
+}
+
+a:nth-of-type(2):visited {
+    color: rgb(219, 151, 24);
+}
+
+a:nth-of-type(3) {
+    color: rgb(151, 0, 88);
+}
+
+a:nth-of-type(3):visited {
+    color: rgb(0, 130, 153);
+}
+
+a:nth-of-type(4) {
+    color: rgb(233, 4, 157);
+}
+
+a:nth-of-type(4):visited {
+    color: rgb(255, 21, 0);
+}
