@@ -1,0 +1,27 @@
+.navbar-brand {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.navbar {
+    border-bottom: 2px solid gray;
+}
+
+.nav-item {
+    border-top: 2px solid gray;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.row div div {
+    background-color: #a5f2a5;
+    height: 100%;
+}
+
+.text {
+    text-align: justify;
+}
