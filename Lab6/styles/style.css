@@ -25,3 +25,6 @@
 .text {
     text-align: justify;
 }
+.nav-item:hover{
+    background-color: lightslategrey;
+}
