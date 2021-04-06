@@ -1,0 +1,33 @@
+#app {
+    text-align     : center;
+    display        : grid;
+    align-items    : center;
+    justify-content: center;
+}
+
+h1 {
+    margin: 5px;
+}
+
+h3 {
+    margin       : 5px;
+    margin-bottom: 10px;
+}
+
+img {
+    margin       : auto;
+    border-radius: 50%;
+    border       : 5px black solid;
+}
+
+.male {
+    border-color: blue;
+}
+
+.female {
+    border-color: pink;
+}
+
+button {
+    border: 5px black solid;
+}
