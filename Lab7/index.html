@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const Types = {
+            Leg: "leg",
+            Hypotenuse: "hypotenuse",
+            AdjacentAngle: "adjacent angle",
+            OppositeAngle: "opposite angle",
+            Angle: "angle"
+        }
+
+        const VariationsOfTypes = {
+            LegLeg: "leg leg",
+            LegHypotenuse: "leg hypotenuse leg",
+            LegAdjacentAngle: "leg adjacent angle leg",
+            LegOppositeAngle: "leg opposite angle leg",
+            HypotenuseAngle: "angle hypotenuse angle"
+        }
+
+        function triangleCalculate(v1, t1, v2, t2) {
+
+            const types = `${t1} ${t2}`;
+            console.log("Next -> values = " + v1 + " " + v2 + "; types = " + types);
+
+            if (v1 <= 0 || v2 <= 0) {
+                console.log("Zero or negative input");
+                return;
+            }
+
+            if (VariationsOfTypes.LegLeg.includes(types)) {
+                legLegCalc(v1, v2);
+            } else if (VariationsOfTypes.LegHypotenuse.includes(types)) {
+                const c = (v1 > v2 ? v1 : v2);
+                const a = (c == v1 ? v2 : v1);
+                legHypotenuseCalc(a, c);
+            } else if (VariationsOfTypes.LegAdjacentAngle.includes(types)) {
+                const a = (t1 == Types.Leg ? v1 : v2);
+                const beta = (t1 == Types.Leg ? v2 : v1);
+                legAdjacentAngleCalc(a, beta);
+            } else if (VariationsOfTypes.LegOppositeAngle.includes(types)) {
+                const a = (t1 == Types.Leg ? v1 : v2);
+                const alpha = (t1 == Types.Leg ? v2 : v1);
+                legOppositeAngleCalc(a, alpha);
+            } else if (VariationsOfTypes.HypotenuseAngle.includes(types)) {
+                const c = (t1 == Types.Hypotenuse ? v1 : v2);
+                const alpha = (t1 == Types.Hypotenuse ? v2 : v1);
+                hypotenuseAngleCalc(c, alpha);
+            }
+        }
+
+        const getAngle = (leg, c) => Math.asin(leg / c) * 180 / Math.PI;
+
+        function legLegCalc(a, b) {
+            const c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))
+            const alpha = getAngle(a, c);
+            const beta = getAngle(b, c);
+            show(a, b, c, alpha, beta)
+        }
+
+        function legHypotenuseCalc(a, c) {
+            const b = Math.sqrt(Math.pow(c, 2) - Math.pow(a, 2));
+            const alpha = getAngle(a, c);
+            const beta = getAngle(b, c);
+            show(a, b, c, alpha, beta)
+        }
+
+        function legAdjacentAngleCalc(a, beta) {
+            const c = a / Math.cos(beta * Math.PI / 180);
+            const b = a * Math.tan(beta * Math.PI / 180);
+            const alpha = getAngle(a, c);
+            show(a, b, c, alpha, beta)
+        }
+
+        function legOppositeAngleCalc(a, alpha) {
+            const c = a / Math.sin(alpha * Math.PI / 180);
+            const b = Math.sqrt(Math.pow(c, 2) - Math.pow(a, 2));
+            const beta = getAngle(b, c);
+            show(a, b, c, alpha, beta)
+        }
+
+        function hypotenuseAngleCalc(c, alpha) {
+            const beta = 90 - alpha;
+            const a = c * Math.sin(alpha * Math.PI / 180);
+            const b = c * Math.sin(beta * Math.PI / 180);
+            show(a, b, c, alpha, beta)
+        }
+
+        function show(a, b, c, alpha, beta) {
+            console.log("a = " + a + "\nb = " + b + "\nc = " + c + "\nAlpha = " + alpha + "\nBeta = " + beta + "\n");
+        }
+
+        triangleCalculate(-2, Types.Leg, 4, Types.Leg);
+        triangleCalculate(0, Types.Leg, 4, Types.Leg);
+        triangleCalculate(3, Types.Leg, 53.13010235415598, Types.AdjacentAngle);
+        triangleCalculate(3, Types.Leg, 4, Types.Leg);
+        triangleCalculate(3, Types.Leg, 5, Types.Hypotenuse);
+        triangleCalculate(5, Types.Hypotenuse, 36.86989764584402, Types.Angle);
+        triangleCalculate(5, Types.Hypotenuse, 3, Types.Leg);
+        triangleCalculate(36.86989764584402, Types.OppositeAngle, 3, Types.Leg);
+    </script>
+</body>
+
+</html>
