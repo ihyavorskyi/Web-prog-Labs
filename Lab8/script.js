@@ -1,3 +1,6 @@
+console.log("Call the 'execute' method!")
+
+
 function execute() {
     var names = ["Bill", "John", "Jen", "Jason", "Paul", "Frank", "Steven", "Larry", "Paula", "Laura", "Jim", "Anna"];
     var goodBye = speakGoodBye();
