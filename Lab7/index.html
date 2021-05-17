@@ -26,21 +26,34 @@
             HypotenuseAngle: "angle hypotenuse angle"
         }
 
-        function triangleCalculate(v1, t1, v2, t2) {
+        function triangle(v1, t1, v2, t2) {
 
             const types = `${t1} ${t2}`;
             console.log("Next -> values = " + v1 + " " + v2 + "; types = " + types);
 
-            if (v1 <= 0 || v2 <= 0) {
-                console.log("Zero or negative input");
+            if (v1 === 0) {
+                console.log(`${t1} cannot be zero`);
+                return;
+            } else if (v2 === 0) {
+                console.log(`${t2} cannot be zero`);
+                return;
+            } else if (v1 <= 0) {
+                console.log(`${t1} cannot be negative`);
+                return;
+            } else if (v2 <= 0) {
+                console.log(`${t2} cannot be negative`);
                 return;
             }
 
             if (VariationsOfTypes.LegLeg.includes(types)) {
                 legLegCalc(v1, v2);
             } else if (VariationsOfTypes.LegHypotenuse.includes(types)) {
-                const c = (v1 > v2 ? v1 : v2);
+                const c = v1 > v2 ? v1 : v2;
                 const a = (c == v1 ? v2 : v1);
+                if ((t1 === Types.Hypotenuse && v1 <= v2) || (t2 === Types.Hypotenuse && v1 >= v2)) {
+                    console.log(`Hypotenuse cannot be greater than Leg`);
+                    return;
+                }
                 legHypotenuseCalc(a, c);
             } else if (VariationsOfTypes.LegAdjacentAngle.includes(types)) {
                 const a = (t1 == Types.Leg ? v1 : v2);
@@ -74,6 +87,10 @@
         }
 
         function legAdjacentAngleCalc(a, beta) {
+            if (beta > 90) {
+                console.log("Angle beta cannot be more than 90 degrees");
+                return;
+            }
             const c = a / Math.cos(beta * Math.PI / 180);
             const b = a * Math.tan(beta * Math.PI / 180);
             const alpha = getAngle(a, c);
@@ -81,6 +98,10 @@
         }
 
         function legOppositeAngleCalc(a, alpha) {
+            if (alpha > 90) {
+                console.log("Angle alpha cannot be more than 90 degrees");
+                return;
+            }
             const c = a / Math.sin(alpha * Math.PI / 180);
             const b = Math.sqrt(Math.pow(c, 2) - Math.pow(a, 2));
             const beta = getAngle(b, c);
@@ -88,24 +109,27 @@
         }
 
         function hypotenuseAngleCalc(c, alpha) {
+            if (alpha > 90) {
+                console.log("Angle alpha cannot be more than 90 degrees");
+                return;
+            }
             const beta = 90 - alpha;
             const a = c * Math.sin(alpha * Math.PI / 180);
             const b = c * Math.sin(beta * Math.PI / 180);
             show(a, b, c, alpha, beta)
         }
 
-        function show(a, b, c, alpha, beta) {
+        const show = (a, b, c, alpha, beta) =>
             console.log("a = " + a + "\nb = " + b + "\nc = " + c + "\nAlpha = " + alpha + "\nBeta = " + beta + "\n");
-        }
 
-        triangleCalculate(-2, Types.Leg, 4, Types.Leg);
-        triangleCalculate(0, Types.Leg, 4, Types.Leg);
-        triangleCalculate(3, Types.Leg, 53.13010235415598, Types.AdjacentAngle);
-        triangleCalculate(3, Types.Leg, 4, Types.Leg);
-        triangleCalculate(3, Types.Leg, 5, Types.Hypotenuse);
-        triangleCalculate(5, Types.Hypotenuse, 36.86989764584402, Types.Angle);
-        triangleCalculate(5, Types.Hypotenuse, 3, Types.Leg);
-        triangleCalculate(36.86989764584402, Types.OppositeAngle, 3, Types.Leg);
+        triangle(-2, Types.Leg, 4, Types.Leg);
+        triangle(0, Types.Leg, 4, Types.Leg);
+        triangle(3, Types.Leg, 53.13010235415598, Types.AdjacentAngle);
+        triangle(3, Types.Leg, 4, Types.Leg);
+        triangle(3, Types.Leg, 5, Types.Hypotenuse);
+        triangle(5, Types.Hypotenuse, 36.86989764584402, Types.Angle);
+        triangle(5, Types.Hypotenuse, 3, Types.Leg);
+        triangle(36.86989764584402, Types.OppositeAngle, 3, Types.Leg);
     </script>
 </body>
 
