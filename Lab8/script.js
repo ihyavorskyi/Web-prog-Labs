@@ -1,7 +1,4 @@
-console.log("Call the 'execute' method!")
-
-
-function execute() {
+(function () {
     var names = ["Bill", "John", "Jen", "Jason", "Paul", "Frank", "Steven", "Larry", "Paula", "Laura", "Jim", "Anna"];
     var goodBye = speakGoodBye();
     var hello = speakHello();
@@ -23,6 +20,4 @@ function execute() {
             hello(item)
         }
     });
-
-    return "End."
-}
+}());
