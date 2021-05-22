@@ -1,0 +1,44 @@
+{
+    "goods": [
+        {
+            "id": 1,
+            "name": "Cat2Goods2",
+            "shortname": "c2g1",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quLorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quLorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quo iusto distinctio,doloremque perspiciatis alias voluptatum placeat facere cum dolor recusandae similique eius ut eos accusantium architecto!",
+            "price": "100",
+            "image": "https://picsum.photos/500/530"
+        },
+        {
+            "id": 2,
+            "name": "Cat2Goods3",
+            "shortname": "c2g1",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quLorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quLorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quo iusto distinctio,doloremque perspiciatis alias voluptatum placeat facere cum dolor recusandae similique eius ut eos accusantium architecto!",
+            "price": "100",
+            "image": "https://picsum.photos/500/531"
+        },
+        {
+            "id": 3,
+            "name": "Cat2Goods4",
+            "shortname": "c2g1",
+            "description": "",
+            "price": "100",
+            "image": "https://picsum.photos/500/532"
+        },
+        {
+            "id": 4,
+            "name": "Cat2Goods5",
+            "shortname": "c2g1",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quLorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quLorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quo iusto distinctio,doloremque perspiciatis alias voluptatum placeat facere cum dolor recusandae similique eius ut eos accusantium architecto!",
+            "price": "100",
+            "image": "https://picsum.photos/500/533"
+        },
+        {
+            "id": 5,
+            "name": "Cat2Goods6",
+            "shortname": "c2g1",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quLorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quLorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quo iusto distinctio,doloremque perspiciatis alias voluptatum placeat facere cum dolor recusandae similique eius ut eos accusantium architecto!",
+            "price": "100",
+            "image": "https://picsum.photos/500/534"
+        }
+    ]
+}

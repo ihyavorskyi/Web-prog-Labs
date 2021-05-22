@@ -1,0 +1,32 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "SomeCategory1",
+            "shortname": "cat1",
+            "notes": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quLorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quLorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quo iusto distinctio,doloremque perspiciatis alias voluptatum placeat facere cum dolor recusandae similique eius ut eos accusantium architecto!",
+            "image": "https://picsum.photos/1280/1023"
+        },
+        {
+            "id": 2,
+            "name": "SomeCategory2",
+            "shortname": "cat2",
+            "notes": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quo iusto distinctio,doloremque perspiciatis alias voluptatum placeat facere cum dolor recusandae similique eius ut eos accusantium architecto!",
+            "image": "https://picsum.photos/1280/1022"
+        },
+        {
+            "id": 3,
+            "name": "SomeCategory3",
+            "shortname": "cat3",
+            "notes": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quo iusto distinctio,doloremque perspiciatis alias voluptatum placeat facere cum dolor recusandae similique eius ut eos accusantium architecto!",
+            "image": "https://picsum.photos/1280/1024"
+        },
+        {
+            "id": 4,
+            "name": "SomeCategory4",
+            "shortname": "cat4",
+            "notes": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel rem ex quo iusto distinctio,doloremque perspiciatis alias voluptatum placeat facere cum dolor recusandae similique eius ut eos accusantium architecto!",
+            "image": "https://picsum.photos/1280/1021"
+        }
+    ]
+}
