@@ -58,33 +58,37 @@ function loadCatalog() {
         function (response) {
             var categories = JSON.parse(response).categories;
             for (let i = 0; i < categories.length; i++) {
-                loadCategory(categories[i].shortname)
+                loadCategory(categories[i].shortname, true)
             }
             showLoader(false);
         });
 }
 
 function loadSpecials() {
-    showLoader(true);
     var randCategory = Math.floor(Math.random() * (4 - 1) + 1);
+    loadCategory(`cat${randCategory}`)
+}
+
+function loadCategoryName(shortname) {
+    showLoader(true);
     $ajaxUtils.sendGetRequest(
         "snippets/category-name-snippet.html",
         function (responseHtml) {
             $ajaxUtils.sendGetRequest(
                 "storage/categories.json",
                 function (response) {
-                    var category = JSON.parse(response).categories.filter(e => e.shortname === `cat${randCategory}`);
+                    var category = JSON.parse(response).categories.filter(e => e.shortname === shortname);
                     responseHtml = insertProperty(responseHtml, "name", category[0].name);
                     document.getElementById("category-name").innerHTML = responseHtml
                     showLoader(false);
                 });
         });
-    loadCategory(`cat${randCategory}`)
 }
 
-function loadCategory(shortname) {
+function loadCategory(shortname, isShowCategoryName) {
     showLoader(true);
     mainContentClear();
+    if (!isShowCategoryName) { loadCategoryName(shortname) }
     $ajaxUtils.sendGetRequest(
         `storage/goods/${shortname}-goods.json`,
         function (response) {
