@@ -11,14 +11,5 @@
             document.getElementById("footer").innerHTML = response
         });
 
-    $ajaxUtils.sendGetRequest(
-        "snippets/preview-snippet.html",
-        function (response) {
-            document.getElementById("main-content").innerHTML += response
-            $ajaxUtils.sendGetRequest(
-                "snippets/slider-snippet.html",
-                function (response) {
-                    document.getElementById("main-content").innerHTML += response
-                });
-        });
+    loadHome();
 }())
