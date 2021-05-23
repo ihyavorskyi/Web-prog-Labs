@@ -33,6 +33,25 @@ function loadGallery() {
                         html = insertProperty(html, "image", images[i]);
                         document.getElementById("gallery-items").innerHTML += html
                     }
+                    document.getElementById("gallery-items").innerHTML +=
+                        `<div style="height: 110px;" class="bg-black p-4 mt-4 mb-5 col-12">
+                            <h1 class="text-center text-white">Страви</h1>
+                        </div>`
+                });
+        });
+
+    $ajaxUtils.sendGetRequest(
+        "snippets/gallery/gallery-item.html",
+        function (responseHtml) {
+            $ajaxUtils.sendGetRequest(
+                "storage/gallery/food.json",
+                function (response) {
+                    var images = JSON.parse(response)
+                    for (let i = 0; i < images.length; i++) {
+                        var html = responseHtml;
+                        html = insertProperty(html, "image", images[i]);
+                        document.getElementById("gallery-items").innerHTML += html
+                    }
                 });
         });
 }
