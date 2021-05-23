@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "М’ясна нарізка сирокопчена",
+    "description": "../images/zakush/1.jpg",
+    "weight": 100,
+    "img": "/images/Food/Appetizer/1.jpg",
+    "price": 49.9
+  },
+  {
+    "id": 2,
+    "name": "Крильця «Пивні» курячі",
+    "description": "",
+    "weight": 400,
+    "img": "/images/Food/Appetizer/2.jpg",
+    "price": 70.95
+  },
+  {
+    "id": 3,
+    "name": "Італійське Прошутто кількість",
+    "description": "",
+    "weight": 50,
+    "img": "/images/Food/Appetizer/3.jpg",
+    "price": 34.9
+  },
+  {
+    "id": 4,
+    "name": "Сирна тарілка",
+    "description": "",
+    "weight": 150,
+    "img": "/images/Food/Appetizer/4.jpg",
+    "price": 84.9
+  },
+  {
+    "id": 5,
+    "name": "Сирна нарізка",
+    "description": "",
+    "weight": 100,
+    "img": "/images/Food/Appetizer/5.jpg",
+    "price": 26.9
+  }
+]
