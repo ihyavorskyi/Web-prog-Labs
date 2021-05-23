@@ -1,3 +1,21 @@
 .content {
     min-height: calc(100vh - 70px);
 }
+
+header {
+    background-color: rgb(27 32 36);
+}
+
+footer {
+    border-top      : 1px solid rgb(133, 133, 133);
+    background-color: rgb(27 32 36);
+}
+
+.navbar-brand,
+.nav-link {
+    color: white !important;
+}
+
+.color-gold {
+    color: #D1A054;
+}
