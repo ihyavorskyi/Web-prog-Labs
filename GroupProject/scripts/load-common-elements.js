@@ -1,12 +1,12 @@
 (function () {
     $ajaxUtils.sendGetRequest(
-        "snippets/header-snippet.html",
+        "snippets/navigation/header-snippet.html",
         function (response) {
             document.getElementById("header").innerHTML = response
         });
 
     $ajaxUtils.sendGetRequest(
-        "snippets/footer-snippet.html",
+        "snippets/navigation/footer-snippet.html",
         function (response) {
             document.getElementById("footer").innerHTML = response
         });
