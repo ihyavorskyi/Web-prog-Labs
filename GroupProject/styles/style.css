@@ -19,3 +19,11 @@ footer {
 .color-gold {
     color: #D1A054;
 }
+
+.navbar-brand{
+    font-size: 28px;
+}
+.nav-link {
+    font-size: 18px;
+    font-family: Lora sans-serif;
+}
