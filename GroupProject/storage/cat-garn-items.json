@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Картопля по-селянськи",
+    "description": "",
+    "weight": 150,
+    "img": "/images/Food/Garnish/bulba.jpg",
+    "price": 140
+  },
+  {
+    "id": 2,
+    "name": "Картопля фрі",
+    "description": "",
+    "weight": 150,
+    "img": "/images/Food/Garnish/bulba-fri.jpg",
+    "price": 130
+  },
+  {
+    "id": 3,
+    "name": "Картопля варена",
+    "description": "",
+    "weight": 150,
+    "img": "/images/Food/Garnish/bulba-varena.jpg",
+    "price": 110
+  },
+  {
+    "id": 4,
+    "name": "Картопля п'юре",
+    "description": "",
+    "weight": 150,
+    "img": "/images/Food/Garnish/bulba-piure.jpg",
+    "price": 115
+  },
+  {
+    "id": 5,
+    "name": "Овочі гриль",
+    "description": "",
+    "weight": 100,
+    "img": "/images/Food/Garnish/vegetables.jpg",
+    "price": 99
+  }
+]

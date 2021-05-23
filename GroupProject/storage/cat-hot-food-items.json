@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Медальйони з телятини",
+    "description": "",
+    "weight": 300,
+    "img": "/images/Food/Hot_Dish/1.jpg",
+    "price": 159.9
+  },
+  {
+    "id": 2,
+    "name": "Ребра свинні з тушеною капустою",
+    "description": "",
+    "weight": 380,
+    "img": "/images/Food/Hot_Dish/2.jpg",
+    "price": 79.9
+  },
+  {
+    "id": 3,
+    "name": "Банош Dai Dai",
+    "description": "",
+    "weight": 350,
+    "img": "/images/Food/Hot_Dish/3.jpg",
+    "price": 78.9
+  },
+  {
+    "id": 4,
+    "name": "Бургер “Club”",
+    "description": "",
+    "weight": 100,
+    "img": "/images/Food/Hot_Dish/4.jpg",
+    "price": 44.9
+  },
+  {
+    "id": 5,
+    "name": "Стейк Бостон • св.ошийок",
+    "description": "",
+    "weight": 300,
+    "img": "/images/Food/Hot_Dish/5.jpg",
+    "price": 99.9
+  }
+]
