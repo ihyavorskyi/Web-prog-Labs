@@ -22,10 +22,11 @@ footer {
 
 .navbar-brand{
     font-size: 28px;
+    font-family: 'Manrope', sans-serif;
 }
 .nav-link {
     font-size: 18px;
-    font-family: Lora sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 .bg-black {
