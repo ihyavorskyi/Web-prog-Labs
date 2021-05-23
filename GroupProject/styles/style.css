@@ -27,3 +27,7 @@ footer {
     font-size: 18px;
     font-family: Lora sans-serif;
 }
+
+.bg-black {
+    background-color: rgb(27 32 36);
+}
