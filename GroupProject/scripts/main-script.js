@@ -14,7 +14,12 @@ function clearMainContent() {
         </section>`
 }
 
+function showLoader(show) {
+    document.getElementById("loader").innerHTML = show ? `<div class="loader-wrapper"><div class="loader"></div></div>` : ``;
+}
+
 function loadGallery() {
+    showLoader(true);
     clearMainContent();
 
     $ajaxUtils.sendGetRequest(
@@ -53,6 +58,7 @@ function loadGallery() {
                         var html = responseHtml;
                         html = insertProperty(html, "image", images[i]);
                         document.getElementById("gallery-items").innerHTML += html
+                        showLoader(false);
                     }
                 });
         });
@@ -99,6 +105,7 @@ function loadCategory(categoryId) {
 }
 
 function loadHome() {
+    showLoader(true);
     clearMainContent();
     $ajaxUtils.sendGetRequest(
         "snippets/preview-snippet.html",
@@ -108,6 +115,8 @@ function loadHome() {
                 "snippets/slider-snippet.html",
                 function (response) {
                     document.getElementById("main-content").innerHTML += response
+                    showLoader(false);
+
                 });
         });
 }
