@@ -1,39 +1,9 @@
-.content {
-    min-height: calc(100vh - 70px);
-}
-
-header {
-    background-color: rgb(27 32 36);
-    border-bottom   : 1px solid #D1A054;
-}
-
-footer {
-    border-top      : 1px solid rgb(133, 133, 133);
-    background-color: rgb(27 32 36);
-}
-
-.navbar-brand,
-.nav-link {
-    color: white !important;
-}
-
-.navbar-brand {
-    font-size: 28px;
-    font-family: 'Manrope', sans-serif;
-}
-
-.nav-link {
-    font-size: 18px;
-    font-family: 'Manrope', sans-serif;
-}
-
-.navbar-dark .navbar-toggler {
-    border-color: #D1A054;
-}
-
-.navbar-toggler:focus {
-    box-shadow: 0 0 0 0.25rem rgb(209, 160, 84);
-}
+@import '../bootstrap/css/bootstrap.min.css';
+@import 'navigation.css';
+@import 'components/modal-image.css';
+@import 'components/loader.css';
+@import 'components/slider.css';
+@import 'category-item.css';
 
 .bg-black {
     background-color: rgb(27 32 36);
@@ -41,4 +11,40 @@ footer {
 
 .color-gold {
     color: #D1A054;
+}
+
+.preview {
+    position  : relative;
+    text-align: center;
+    color     : white;
+}
+
+.centered {
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+    color    : white;
+}
+
+.page-header {
+    height               : 400px;
+    background-attachment: fixed;
+    position             : relative;
+    text-align           : center;
+    background-size      : cover;
+    background-position  : 50%;
+    color                : white;
+    margin-bottom        : 40px;
+}
+
+.centered-text {
+    background-color: #9e9e9e7a;
+    padding         : 5px 15px;
+    border-radius   : 5px;
+    position        : absolute;
+    top             : 50%;
+    left            : 50%;
+    transform       : translate(-50%, -50%);
+    color           : white;
 }

@@ -40,28 +40,28 @@ function loadGallery() {
                     for (let i = 0; i < images.length; i++) {
                         var html = responseHtml;
                         html = insertProperty(html, "image", images[i]);
+                        html = insertProperty(html, "imageId", `img${i}`);
                         document.getElementById("gallery-items").innerHTML += html
                     }
                     document.getElementById("gallery-items").innerHTML +=
-                        `<div style="height: 110px;" class="bg-black p-4 mt-4 mb-5 col-12">
+                        `<div style="height: 110px;" class="bg-black p-4 mt-4 mb-5 ml-1">
                             <h1 class="text-center text-white">Страви</h1>
-                        </div>`
-                });
-        });
-
-    $ajaxUtils.sendGetRequest(
-        "snippets/gallery/gallery-item.html",
-        function (responseHtml) {
-            $ajaxUtils.sendGetRequest(
-                "storage/gallery/food.json",
-                function (response) {
-                    var images = JSON.parse(response)
-                    for (let i = 0; i < images.length; i++) {
-                        var html = responseHtml;
-                        html = insertProperty(html, "image", images[i]);
-                        document.getElementById("gallery-items").innerHTML += html
-                        showLoader(false);
-                    }
+                        </div>`;
+                    $ajaxUtils.sendGetRequest(
+                        "snippets/gallery/gallery-item.html",
+                        function (responseHtml) {
+                            $ajaxUtils.sendGetRequest(
+                                "storage/gallery/food.json",
+                                function (response) {
+                                    var images = JSON.parse(response)
+                                    for (let i = 0; i < images.length; i++) {
+                                        var html = responseHtml;
+                                        html = insertProperty(html, "image", images[i]);
+                                        document.getElementById("gallery-items").innerHTML += html
+                                        showLoader(false);
+                                    }
+                                });
+                        });
                 });
         });
 }
@@ -112,15 +112,28 @@ function loadHome() {
     showLoader(true);
     clearMainContent();
     $ajaxUtils.sendGetRequest(
-        "snippets/preview-snippet.html",
+        "snippets/home/preview-snippet.html",
         function (response) {
             document.getElementById("main-content").innerHTML += response
             $ajaxUtils.sendGetRequest(
-                "snippets/slider-snippet.html",
+                "snippets/home/slider-snippet.html",
                 function (response) {
                     document.getElementById("main-content").innerHTML += response
                     showLoader(false);
 
                 });
         });
+}
+
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+function modalImage(imgId) {
+    var img = document.getElementById(imgId);
+    var modalImg = document.getElementById("imageToShow");
+    modal.style.display = "block";
+    modalImg.src = img.src;
 }

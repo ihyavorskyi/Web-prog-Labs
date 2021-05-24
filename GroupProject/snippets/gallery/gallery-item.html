@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-    <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <img src="images/Gallery/{{image}}" alt="" class="col-12" style="height: 250px; object-fit: cover;">
-    </div>
-</body>
-
-</html>
+<div class="col-12 col-sm-6 col-md-4 mb-4" onclick="modalImage('{{imageId}}')">
+    <img id="{{imageId}}" src="images/Gallery/{{image}}" alt="images/Gallery/{{image}}" class="col-12 image-show"
+        style="height: 250px; object-fit: cover;">
+</div>
