@@ -6,21 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .gallery-image {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-        }
-
-        ​ .preview {
+        .category-header {
+            height: 400px;
+            background-attachment: fixed;
             position: relative;
             text-align: center;
+            background-size: cover;
+            background-position: 50%;
             color: white;
+            margin-bottom: 40px;
         }
 
-        .centered {
+        .centered-text {
+            background-color: #9e9e9e7a;
+            padding: 5px 15px;
+            border-radius: 5px;
             position: absolute;
-            top: 32%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
@@ -29,9 +31,9 @@
 </head>
 
 <body>
-    <div class="preview mb-5">
-        <img src="images/Gallery/restourant/nebos_36.jpg" alt="" class="gallery-image">
-        <h1 class="centered">Галерея</h1>
+    <div style="background-image: url('images/Gallery/restourant/nebos_36.jpg')" class="category-header"
+        id="cat-header">
+        <h1 class="centered-text">Галерея</h1>
     </div>
 </body>
 
