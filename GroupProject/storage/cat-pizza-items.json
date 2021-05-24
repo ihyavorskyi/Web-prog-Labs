@@ -4,7 +4,7 @@
     "name": "Піца з мангалиці",
     "description": "Перетерті томати, ковбаса з мангалиці, сири моцарела та рікота",
     "weight": 480,
-    "img": "/images/Food/Pizza/1.jpg",
+    "img": "Pizza/1.jpg",
     "price": 104
   },
   {
@@ -12,7 +12,7 @@
     "name": "Прошуто",
     "description": "Перетерті томати, моцарела, шинка.",
     "weight": 430,
-    "img": "/images/Food/Pizza/2.jpg",
+    "img": "Pizza/2.png",
     "price": 99
   },
   {
@@ -20,7 +20,7 @@
     "name": "Карбонара",
     "description": "Томати, моцарела, шинка, баварські ковбаски та запечене яйце.",
     "weight": 440,
-    "img": "/images/Food/Pizza/3.jpg",
+    "img": "Pizza/3.jpg",
     "price": 99
   },
   {
@@ -28,7 +28,7 @@
     "name": "Подвійна пепероні",
     "description": "Перетерті томати, моцарела, подвійна порція салямі пікантної, перець чилі.",
     "weight": 450,
-    "img": "/images/Food/Pizza/4.jpg",
+    "img": "Pizza/4.jpg",
     "price": 136
   },
   {
@@ -36,7 +36,7 @@
     "name": "Маргарита",
     "description": "Перетерті томати, моцарела, помідори.",
     "weight": 390,
-    "img": "/images/Food/Pizza/5.jpg",
+    "img": "Pizza/5.jpg",
     "price": 86
   }
 ]

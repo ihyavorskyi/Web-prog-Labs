@@ -4,7 +4,7 @@
     "name": "Whiskey Bell's",
     "description": "",
     "weight": 50,
-    "img": "/images/Food/Alc/bells.jpg",
+    "img": "Alc/bells.jpg",
     "price": 150
   },
   {
@@ -12,7 +12,7 @@
     "name": "Whiskey Claymore",
     "description": "",
     "weight": 50,
-    "img": "/images/Food/Alc/claymore.jpg",
+    "img": "Alc/claymore.jpg",
     "price": 110
   },
   {
@@ -20,7 +20,7 @@
     "name": "Whiskey Jack Daniels",
     "description": "",
     "weight": 50,
-    "img": "/images/Food/Alc/jack-daniels.jpg",
+    "img": "Alc/jack-daniels.jpg",
     "price": 115
   },
   {
@@ -28,7 +28,7 @@
     "name": "Whiskey Jameson",
     "description": "",
     "weight": 50,
-    "img": "/images/Food/Alc/jameson.jpg",
+    "img": "Alc/jameson.jpg",
     "price": 160
   },
   {
@@ -36,7 +36,7 @@
     "name": "Whiskey Jim-Beam",
     "description": "",
     "weight": 50,
-    "img": "/images/Food/Alc/jim-beam.jpg",
+    "img": "Alc/jim-beam.jpg",
     "price": 144
   }
 ]

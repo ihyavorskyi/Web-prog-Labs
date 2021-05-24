@@ -8,6 +8,8 @@ function clearMainContent() {
             <div id="gallery-head"></div>
             <div class="container">
                 <div class="row" id="gallery-items"></div>
+                <div class="row" id="food-block"></div>
+                <div class="row" id="food-items"></div>
             </div>
         </section>`
 }
@@ -53,6 +55,46 @@ function loadGallery() {
                         document.getElementById("gallery-items").innerHTML += html
                     }
                 });
+        });
+}
+
+function loadCategory(categoryId) {
+    var categories = [];
+    $ajaxUtils.sendGetRequest("storage/categories.json",
+        response => {
+            categories = JSON.parse(response);
+            var currentCategory = categories.filter(c => c.id === categoryId)[0];
+
+            console.log(currentCategory);
+            clearMainContent();
+            $ajaxUtils.sendGetRequest(
+                "snippets/category/category.html",
+                catResponse => {
+                    catResponse = insertProperty(catResponse, "categoryName", currentCategory.name);
+                    catResponse = insertProperty(catResponse, "categorySrc", currentCategory.img);
+                    document.getElementById("food-block").innerHTML += catResponse;
+                });
+
+            $ajaxUtils.sendGetRequest(
+                'storage/' + currentCategory.source,
+                catItemsResp => {
+                    $ajaxUtils.sendGetRequest(
+                        "snippets/category/category-item.html",
+                        catItemResponse => {
+                            var items = JSON.parse(catItemsResp);
+                            for (let i = 0; i < items.length; i++) {
+                                var html = catItemResponse;
+                                html = insertProperty(html, 'foodName', items[i].name);
+                                html = insertProperty(html, 'foodDescription', items[i].description);
+                                html = insertProperty(html, 'foodImg', items[i].img);
+                                html = insertProperty(html, 'foodPrice', items[i].price);
+                                html = insertProperty(html, 'foodWeight', items[i].weight);
+                                document.getElementById("food-items").innerHTML += html;
+                            }
+                        });
+                }
+            )
+
         });
 }
 
