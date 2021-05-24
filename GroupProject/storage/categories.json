@@ -3,30 +3,35 @@
     "id": 1,
     "name": "Алкогольні напої",
     "description": "Алкоголь наше все",
-    "img": ""
+    "img": "alk_3.png",
+    "source": "cat-alko-items.json"
   },
   {
     "id": 2,
     "name": "Гарячі страви",
     "description": "Гарячі страви наше все",
-    "img": ""
+    "img": "hot_dish_5.jpg",
+    "source": "cat-hot-food-items.json"
   },
   {
     "id": 3,
     "name": "Закуски",
     "description": "Закуски наше все",
-    "img": ""
+    "img": "zakuski_2.jpg",
+    "source": "cat-zakusk-items.json"
   },
   {
     "id": 4,
     "name": "Гарніри",
     "description": "Гарніри наше все",
-    "img": ""
+    "img": "garn.jpg",
+    "source": "cat-garn-items.json"
   },
   {
     "id": 5,
     "name": "Піца",
     "description": "Піца наше все",
-    "img": ""
+    "img": "pizza_3.jpg",
+    "source": "cat-pizza-items.json"
   }
 ]
