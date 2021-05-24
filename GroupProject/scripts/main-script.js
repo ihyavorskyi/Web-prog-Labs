@@ -8,7 +8,9 @@ function clearMainContent() {
             <div id="gallery-head"></div>
             <div class="container">
                 <div class="row" id="gallery-items"></div>
-                <div class="row" id="food-block"></div>
+            </div>
+            <div id="food-block"></div>
+            <div class="container">
                 <div class="row" id="food-items"></div>
             </div>
         </section>`
@@ -65,6 +67,7 @@ function loadGallery() {
 }
 
 function loadCategory(categoryId) {
+    showLoader(true);
     var categories = [];
     $ajaxUtils.sendGetRequest("storage/categories.json",
         response => {
@@ -97,6 +100,7 @@ function loadCategory(categoryId) {
                                 html = insertProperty(html, 'foodWeight', items[i].weight);
                                 document.getElementById("food-items").innerHTML += html;
                             }
+                            showLoader(false);
                         });
                 }
             )
