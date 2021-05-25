@@ -73,3 +73,18 @@
 #menu-content{
     margin-top: 40px;
 }
+.btn{
+    background-color: #D1A054;
+    color:white;
+    box-shadow: none;
+    width: 200px;
+    border-radius: 0px;
+}
+@media (max-width: 767.98px){
+    .navbar-brand{
+        font-size: 22px;
+    }
+    .page-header{
+        background-attachment: inherit;
+    }
+}

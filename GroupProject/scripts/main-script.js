@@ -75,8 +75,6 @@ function loadCategory(categoryId) {
         response => {
             categories = JSON.parse(response);
             var currentCategory = categories.filter(c => c.id == categoryId)[0];
-
-            console.log(currentCategory);
             clearMainContent();
             $ajaxUtils.sendGetRequest(
                 "snippets/category/category.html",
