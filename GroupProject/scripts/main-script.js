@@ -14,7 +14,7 @@ function clearMainContent() {
                 <div class="row" id="food-items"></div>
             </div>
         </section>`
-    document.getElementById("menu-content").innerHTML =" ";
+    document.getElementById("menu-content").innerHTML = " ";
 
 }
 
@@ -23,6 +23,7 @@ function showLoader(show) {
 }
 
 function loadGallery() {
+    setAsActiveLink("gallery-link");
     showLoader(true);
     clearMainContent();
 
@@ -69,6 +70,7 @@ function loadGallery() {
 }
 
 function loadCategory(categoryId) {
+    setAsActiveLink("navbarDropdown");
     showLoader(true);
     var categories = [];
     $ajaxUtils.sendGetRequest("storage/categories.json",
@@ -108,7 +110,6 @@ function loadCategory(categoryId) {
         });
 }
 function loadMenu() {
-    showLoader(true);
     var categories = [];
     $ajaxUtils.sendGetRequest("storage/categories.json",
         response => {
@@ -117,7 +118,7 @@ function loadMenu() {
             $ajaxUtils.sendGetRequest(
                 "snippets/menu/menu-item.html",
                 menuItem => {
-                    categories.forEach(category=>{
+                    categories.forEach(category => {
                         let html = menuItem;
                         html = insertProperty(html, 'id', category.id);
                         html = insertProperty(html, 'name', category.name);
@@ -132,6 +133,7 @@ function loadMenu() {
         });
 }
 function loadHome() {
+    setAsActiveLink("home-link");
     showLoader(true);
     clearMainContent();
     $ajaxUtils.sendGetRequest(
@@ -143,10 +145,28 @@ function loadHome() {
                 function (response) {
                     document.getElementById("main-content").innerHTML += response
                     loadMenu();
-                    showLoader(false);
-
                 });
         });
+}
+
+function setAsActiveLink(linkId) {
+    if (linkId === "home-link") {
+        document.getElementById(linkId).classList.add('active-link');
+    } else {
+        document.getElementById("home-link").classList.remove('active-link');
+    }
+
+    if (linkId === "gallery-link") {
+        document.getElementById(linkId).classList.add('active-link');
+    } else {
+        document.getElementById("gallery-link").classList.remove('active-link');
+    }
+
+    if (linkId === "navbarDropdown") {
+        document.getElementById(linkId).classList.add('active-link');
+    } else {
+        document.getElementById("navbarDropdown").classList.remove('active-link');
+    }
 }
 
 var modal = document.getElementById("myModal");

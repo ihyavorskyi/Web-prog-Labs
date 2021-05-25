@@ -9,6 +9,10 @@
     background-color: rgb(27 32 36);
 }
 
+.bg-light-black {
+    background-color: #23292d
+}
+
 .color-gold {
     color: #D1A054;
 }
@@ -56,35 +60,46 @@
     min-height: 40px;
     position  : relative;
 }
-.find-us-icons:link{
+
+.find-us-icons:link {
     text-decoration: inherit;
-    color: inherit;
-    cursor: auto;
+    color          : inherit;
+    cursor         : auto;
 }
-.find-us-icons:visited{
+
+.find-us-icons:visited {
     text-decoration: inherit;
-    color: inherit;
-    cursor: auto;
+    color          : inherit;
+    cursor         : auto;
 }
-.find-us-icons{
+
+.find-us-icons {
     font-size: 24px;
-    margin: 5px;
+    margin   : 5px;
 }
-#menu-content{
+
+#menu-content {
     margin-top: 40px;
 }
-.btn{
+
+.btn {
     background-color: #D1A054;
-    color:white;
-    box-shadow: none;
-    width: 200px;
-    border-radius: 0px;
+    color           : white;
+    box-shadow      : none;
+    width           : 200px;
+    border-radius   : 0px;
 }
-@media (max-width: 767.98px){
-    .navbar-brand{
+
+@media (max-width: 767.98px) {
+    .navbar-brand {
         font-size: 22px;
     }
-    .page-header{
+
+    .page-header {
         background-attachment: inherit;
     }
+}
+
+.active-link {
+    color: #D1A054 !important;
 }
