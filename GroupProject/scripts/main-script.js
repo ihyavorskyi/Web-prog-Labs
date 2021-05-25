@@ -14,6 +14,8 @@ function clearMainContent() {
                 <div class="row" id="food-items"></div>
             </div>
         </section>`
+    document.getElementById("menu-content").innerHTML =" ";
+
 }
 
 function showLoader(show) {
@@ -72,7 +74,7 @@ function loadCategory(categoryId) {
     $ajaxUtils.sendGetRequest("storage/categories.json",
         response => {
             categories = JSON.parse(response);
-            var currentCategory = categories.filter(c => c.id === categoryId)[0];
+            var currentCategory = categories.filter(c => c.id == categoryId)[0];
 
             console.log(currentCategory);
             clearMainContent();
@@ -107,7 +109,30 @@ function loadCategory(categoryId) {
 
         });
 }
+function loadMenu() {
+    showLoader(true);
+    var categories = [];
+    $ajaxUtils.sendGetRequest("storage/categories.json",
+        response => {
+            categories = JSON.parse(response);
 
+            $ajaxUtils.sendGetRequest(
+                "snippets/menu/menu-item.html",
+                menuItem => {
+                    categories.forEach(category=>{
+                        let html = menuItem;
+                        html = insertProperty(html, 'id', category.id);
+                        html = insertProperty(html, 'name', category.name);
+                        html = insertProperty(html, 'img', category.img);
+                        document.getElementById("menu-content").innerHTML += html;
+                    });
+
+                    showLoader(false)
+                });
+
+
+        });
+}
 function loadHome() {
     showLoader(true);
     clearMainContent();
@@ -119,6 +144,7 @@ function loadHome() {
                 "snippets/home/slider-snippet.html",
                 function (response) {
                     document.getElementById("main-content").innerHTML += response
+                    loadMenu();
                     showLoader(false);
 
                 });
