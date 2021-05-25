@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "name": "Алкогольні напої",
-    "description": "Алкоголь наше все",
-    "img": "alk_3.png",
-    "source": "cat-alko-items.json"
+    "name": "Десерти",
+    "description": "Десерти наше все",
+    "img": "desert.jpg",
+    "source": "cat-desert-items.json"
   },
   {
     "id": 2,
