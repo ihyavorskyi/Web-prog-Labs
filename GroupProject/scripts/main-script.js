@@ -60,6 +60,7 @@ function loadGallery() {
                                     for (let i = 0; i < images.length; i++) {
                                         var html = responseHtml;
                                         html = insertProperty(html, "image", images[i]);
+                                        html = insertProperty(html, "imageId", `img-food${i}`);
                                         document.getElementById("gallery-items").innerHTML += html
                                         showLoader(false);
                                     }
