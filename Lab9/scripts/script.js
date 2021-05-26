@@ -65,7 +65,7 @@ function loadCatalog() {
 }
 
 function loadSpecials() {
-    var randCategory = Math.floor(Math.random() * (4 - 1) + 1);
+    var randCategory = Math.floor(Math.random() * (6 - 1) + 1);
     loadCategory(`cat${randCategory}`)
 }
 
