@@ -1,6 +1,6 @@
 .image-show {
-    cursor       : pointer;
-    transition   : 0.3s;
+    cursor    : pointer;
+    transition: 0.3s;
 }
 
 .image-show:hover {
@@ -59,4 +59,13 @@
     .modal-content {
         width: 100%;
     }
+}
+
+.image-show:hover {
+    transform: scale(1.2)
+}
+
+.modal-image-wrapper {
+    display : block;
+    overflow: hidden
 }
